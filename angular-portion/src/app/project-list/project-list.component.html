@@ -1,0 +1,15 @@
+<p>
+  Project List
+</p>
+
+<div class="error" *ngIf="errorMessage"> {{errorMessage}} </div>
+
+<div>
+  <div class="project-list" *ngFor="let oneProject of projects">
+    <h3> {{oneProject.name}} </h3>
+    <p> {{oneProject.desc }} </p>
+    <a [routerLink]="['/project-details', oneProject._id]">
+      View Details
+    </a>
+  </div>
+</div>

@@ -8,7 +8,8 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectListComponent implements OnInit {
 
-  projects: Array<Object> = [];
+  projects: Array<any> = [];
+
   errorMessage: String = '';
 
   constructor(private myProjectService: ProjectService) { }

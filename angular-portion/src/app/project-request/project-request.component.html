@@ -4,15 +4,15 @@
 
 <div>
   <form action="post">
-    <input type="text" name="name" label="Name" placeholder="name">
+    <input type="text" [(ngModel)]="formInfo.name" name="name" label="Name" placeholder="name">
     <br>
-    <input type="radio" name="mediaType" value="logo"> Logo
-    <input type="radio" name="mediaType" value="ad"> Ad
-    <input type="radio" name="mediaType" value="banner"> Banner
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="logo"> Logo
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="ad"> Ad
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="banner"> Banner
     <br>
-    <input type="checkbox" name="fileType" value="jpg"> JPG
-    <input type="checkbox" name="fileType" value="png"> PNG
-    <input type="checkbox" name="fileType" value="vector"> Vector
+    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="jpg"> JPG
+    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="png"> PNG
+    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="vector"> Vector
     <br>
     <input type="color" name="favcolor" value=" ">
     <input type="color" name="favcolor" value=" ">
@@ -20,9 +20,9 @@
     <br>
     Due Date:<input type="date" name="dueDate">
     <br>
-    <input id="picture-input" type="file" name="picture">
+    <input id="picture-input" [(ngModel)]="formInfo.images" type="file" name="picture">
     <br>
-    <input type="text" name="desc" label="Description" placeholder="Description">
+    <input type="text" name="desc" [(ngModel)]="formInfo.desc" label="Description" placeholder="Description">
 
     <button type="submit">Submit</button>
   </form>

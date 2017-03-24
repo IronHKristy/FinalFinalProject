@@ -7,7 +7,14 @@ import { ProjectService } from '../services/project.service';
   styleUrls: ['./project-request.component.css']
 })
 export class ProjectRequestComponent implements OnInit {
-
+  formInfo = {
+    name: '',
+    mediaType: '',
+    fileType: '',
+    desc: '',
+    images: ''
+  };
+  
   constructor() { }
 
   ngOnInit() {

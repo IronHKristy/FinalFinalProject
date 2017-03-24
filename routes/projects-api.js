@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Project = require('../models/project-model');
 const router = express.Router();
+const Project = require('../models/project-model');
 
 router.get('/projects', (req, res, next) => {
   Project.find((err, projectsList) => {
@@ -9,13 +9,12 @@ router.get('/projects', (req, res, next) => {
       res.json(err);
       return;
     }
-
     res.json(projectsList);
   });
 });
 
 router.post('/projects', (req, res, next) => {
-  const theProject = new Project({
+  const newProject = new Project({
     name: req.body.name,
     mediaType: req.body.mediaType,
     fileType: req.body.fileType,
@@ -23,7 +22,7 @@ router.post('/projects', (req, res, next) => {
     images: req.body.images
   });
 
-  theProject.save((err) => {
+  newProject.save((err) => {
     if(err) {
       req.json(err);
       return;

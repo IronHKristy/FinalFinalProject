@@ -32,3 +32,9 @@ npm-debug.log
 
 #Environment variables
 .env
+
+#Testing page
+delete.js
+
+#this file
+.gitignore

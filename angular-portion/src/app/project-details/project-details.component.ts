@@ -9,7 +9,7 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  project: Object;
+  project: Array<any> = [];
 
   constructor(
     private myRoute: ActivatedRoute,
@@ -27,6 +27,7 @@ export class ProjectDetailsComponent implements OnInit {
     this.myProjectService.get(id)
     .then((theProjectDetails) => {
       this.project = theProjectDetails;
+      console.log(this.project);
     })
 
     .catch((err) => {

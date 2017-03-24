@@ -8,6 +8,7 @@
   <div class="project-list" *ngFor="let oneProject of projects">
     <h3> {{oneProject.name}} </h3>
     <p> {{oneProject.desc }} </p>
+    <img src="{{ oneProject.images }}">
     <a [routerLink]="['/project-details', oneProject._id]">
       View Details
     </a>

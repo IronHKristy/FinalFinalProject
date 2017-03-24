@@ -12,12 +12,38 @@ export class ProjectRequestComponent implements OnInit {
     mediaType: '',
     fileType: '',
     desc: '',
-    images: ''
+    images: '',
+    colorOne: '',
+    colorTwo: '',
+    colorThree: ''
   };
-  
-  constructor() { }
+
+
+  constructor(private myProjectService: ProjectService) { }
 
   ngOnInit() {
   }
 
+  addProject(newProject) {
+    console.log(this.formInfo);
+    this.myProjectService.addToList(this.formInfo)
+    .then((apiResult) => {
+      console.log(apiResult);
+    })
+    .catch((err) => {
+      console.log("Broke in request component", err);
+    })
+  }
 }
+
+
+  // newItem = {};
+  // theList = this.theAccess.logMessages;
+  // constructor(private theAccess: AccessControlLogService) { }
+  //
+  // ngOnInit() {
+  // }
+  //
+  // addThis() {
+  //   this.theAccess.addAccessItem(this.newItem);
+  // }

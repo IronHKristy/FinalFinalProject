@@ -6,17 +6,17 @@
   <form action="post">
     <input type="text" [(ngModel)]="formInfo.name" name="name" label="Name" placeholder="name">
     <br>
-    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="logo"> Logo
-    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="ad"> Ad
-    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType" value="banner"> Banner
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="logo"> Logo
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="ad"> Ad
+    <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="banner"> Banner
     <br>
-    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="jpg"> JPG
-    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="png"> PNG
-    <input type="checkbox" [(ngModel)]="formInfo.fileType" name="fileType" value="vector"> Vector
+    <input type="checkbox" [(ngModel)]="formInfo.jpg" name="fileType[]" value="jpg"> JPG
+    <input type="checkbox" [(ngModel)]="formInfo.png" name="fileType[]" value="png"> PNG
+    <input type="checkbox" [(ngModel)]="formInfo.vector" name="fileType[]" value="vector"> Vector
     <br>
-    <input type="color" name="favcolor" value=" ">
-    <input type="color" name="favcolor" value=" ">
-    <input type="color" name="favcolor" value=" ">
+    <input type="color" [(ngModel)]="colorOne" name="colorFirst">
+    <input type="color" [(ngModel)]="colorTwo" name="colorSecond">
+    <input type="color" [(ngModel)]="colorThree" name="colorThird">
     <br>
     Due Date:<input type="date" name="dueDate">
     <br>
@@ -24,6 +24,26 @@
     <br>
     <input type="text" name="desc" [(ngModel)]="formInfo.desc" label="Description" placeholder="Description">
 
-    <button type="submit">Submit</button>
+    <button (click)="addProject()">Submit</button>
   </form>
 </div>
+
+
+<!-- <div>
+  <form action="post" >
+    <label for="person"> Your name </label>
+    <input name="person" [(ngModel)]="newItem.person" type="text" placeholder="Your name">
+
+    <label for="message"> Message </label>
+    <input name="message" [(ngModel)]="newItem.message" type="text" placeholder="Message">
+
+    <button (click) = "addThis()">Submit</button>
+  </form>
+</div>
+
+The list
+<ul *ngFor = "let item of theList">
+  <li>
+    <p>{{item.person}}, {{item.message}}</p>
+  </li>
+</ul> -->

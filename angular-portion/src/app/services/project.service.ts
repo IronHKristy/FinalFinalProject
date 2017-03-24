@@ -13,6 +13,12 @@ export class ProjectService {
       .then(apiResponse => apiResponse.json())
   }
 
+  addToList(newProject) {
+    return this.myHttp.post(`${this.BASE_URL}/api/projects`, newProject)
+    .toPromise()
+    .then(apiResponse => apiResponse.json())
+  }
+
   get(id) {
     return this.myHttp.get(`${this.BASE_URL}/api/projects/${id}`)
       .toPromise()

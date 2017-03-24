@@ -6,13 +6,13 @@ mongoose.connect(process.env.MONGODB_URI);
 
 projects = [{
   name: "Project1",
-  mediaType: true,
+  mediaType: "logo",
   fileType: true,
   desc: "Description1",
   images: 'https://media.giphy.com/media/3o6ZsVdmA8umtiRpdu/giphy.gif'
 },{
   name: "Project2",
-  mediaType: true,
+  mediaType: "banner",
   fileType: true,
   desc: "Description2",
   images: 'https://media.giphy.com/media/l0ErElRvtuKrCoM6c/giphy.gif'

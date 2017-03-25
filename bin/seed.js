@@ -9,13 +9,19 @@ projects = [{
   mediaType: "logo",
   fileType: true,
   desc: "Description1",
-  images: 'https://media.giphy.com/media/3o6ZsVdmA8umtiRpdu/giphy.gif'
+  images: 'https://media.giphy.com/media/3o6ZsVdmA8umtiRpdu/giphy.gif',
+  colorOne: '#ff0000',
+  colorTwo: '#00ff00',
+  colorThree: '#0033cc'
 },{
   name: "Project2",
   mediaType: "banner",
   fileType: true,
   desc: "Description2",
-  images: 'https://media.giphy.com/media/l0ErElRvtuKrCoM6c/giphy.gif'
+  images: 'https://media.giphy.com/media/l0ErElRvtuKrCoM6c/giphy.gif',
+  colorOne: '#00ffff',
+  colorTwo: '#ff33cc',
+  colorThree: '#cccc00'
 }];
 
 // Trail.create(trails, (err,docs) => {

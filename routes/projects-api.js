@@ -30,7 +30,7 @@ router.post('/projects', (req, res, next) => {
 
     res.json({
       message: 'new project created',
-      id: theProject._id
+      id: newProject._id
     });
   });
 });
@@ -47,6 +47,21 @@ router.get('/projects/:id', (req, res, next) => {
       return;
     }
     res.json(theProject);
+  });
+});
+
+router.delete('/projects/:id', (req, res, next) => {
+  //Check to see if ID is a valid mongoose identified
+  if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    res.status(400).json({ message: 'Specified ID is NOT valid.' });
+    return;
+  }
+  Project.remove({ _id: req.params.id}, (err) => {
+    if (err) {
+      res.json(err);
+      return;
+    }
+    res.json({ message: 'Project has been removed.' });
   });
 });
 

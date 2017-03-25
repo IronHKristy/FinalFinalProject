@@ -35,15 +35,3 @@ export class ProjectRequestComponent implements OnInit {
     })
   }
 }
-
-
-  // newItem = {};
-  // theList = this.theAccess.logMessages;
-  // constructor(private theAccess: AccessControlLogService) { }
-  //
-  // ngOnInit() {
-  // }
-  //
-  // addThis() {
-  //   this.theAccess.addAccessItem(this.newItem);
-  // }

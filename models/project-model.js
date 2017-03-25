@@ -10,7 +10,8 @@ const projectSchema = new Schema({
   images: String,
   colorOne: String,
   colorTwo: String,
-  colorThree: String
+  colorThree: String,
+  dueDate: Date
 });
 
 const Project = mongoose.model("Project", projectSchema);

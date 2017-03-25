@@ -3,7 +3,7 @@
 </p>
 
 <div>
-  <form action="post">
+  <form action="post" method="post" enctype="multipart/form-data">
     <input type="text" [(ngModel)]="formInfo.name" name="name" label="Name" placeholder="name">
     <br>
     <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="logo"> Logo
@@ -14,13 +14,13 @@
     <input type="checkbox" [(ngModel)]="formInfo.png" name="fileType[]" value="png"> PNG
     <input type="checkbox" [(ngModel)]="formInfo.vector" name="fileType[]" value="vector"> Vector
     <br>
-    <input type="color" [(ngModel)]="colorOne" name="colorFirst">
-    <input type="color" [(ngModel)]="colorTwo" name="colorSecond">
-    <input type="color" [(ngModel)]="colorThree" name="colorThird">
+    <input type="color" [(ngModel)]="formInfo.colorOne" name="colorFirst">
+    <input type="color" [(ngModel)]="formInfo.colorTwo" name="colorSecond">
+    <input type="color" [(ngModel)]="formInfo.colorThree" name="colorThird">
     <br>
-    Due Date:<input type="date" name="dueDate">
+    Due Date:<input type="date" [(ngModel)]="formInfo.dueDate" name="dueDate">
     <br>
-    <input id="picture-input" [(ngModel)]="formInfo.images" type="file" name="picture">
+    <input id="picture-input" type="file" [(ngModel)]="formInfo.images"  name="picture">
     <br>
     <input type="text" name="desc" [(ngModel)]="formInfo.desc" label="Description" placeholder="Description">
 

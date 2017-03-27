@@ -1,1 +1,11 @@
+.cap-image-size {
+  max-height: 200px;
+}
 
+.color-box-one {
+  display: inline;
+  float: left;
+  height: 50px;
+  width: 50px;
+  border: 1px solid red;
+}

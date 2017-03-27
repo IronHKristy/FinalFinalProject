@@ -7,21 +7,23 @@ mongoose.connect(process.env.MONGODB_URI);
 projects = [{
   name: "Project1",
   mediaType: "logo",
-  fileType: true,
+  fileType: 'jpg',
   desc: "Description1",
   images: 'https://media.giphy.com/media/3o6ZsVdmA8umtiRpdu/giphy.gif',
   colorOne: '#ff0000',
   colorTwo: '#00ff00',
-  colorThree: '#0033cc'
+  colorThree: '#0033cc',
+  dueDate: '4/18/1980'
 },{
   name: "Project2",
   mediaType: "banner",
-  fileType: true,
+  fileType: 'png',
   desc: "Description2",
   images: 'https://media.giphy.com/media/l0ErElRvtuKrCoM6c/giphy.gif',
   colorOne: '#00ffff',
   colorTwo: '#ff33cc',
-  colorThree: '#cccc00'
+  colorThree: '#cccc00',
+  dueDate: '2/08/1985'
 }];
 
 // Trail.create(trails, (err,docs) => {

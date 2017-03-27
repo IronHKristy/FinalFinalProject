@@ -41,7 +41,7 @@ export class ProjectDetailsComponent implements OnInit {
       }
       this.myProjectService.remove(this.project['_id'])
         .then(() => {
-          this.myNavigator.navigate(['/']);
+          this.myNavigator.navigate(['/project-list']);
         })
         .catch((err) => {
           console.log('Could not retrieve project details');

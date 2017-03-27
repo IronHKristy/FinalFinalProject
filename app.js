@@ -1,13 +1,18 @@
-const express      = require('express');
-const path         = require('path');
-const favicon      = require('serve-favicon');
-const logger       = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser   = require('body-parser');
-const layouts      = require('express-ejs-layouts');
-const mongoose     = require('mongoose');
-const dotenv       = require('dotenv');
-const cors         = require('cors');
+const express       = require('express');
+const path          = require('path');
+const favicon       = require('serve-favicon');
+const logger        = require('morgan');
+const cookieParser  = require('cookie-parser');
+const bodyParser    = require('body-parser');
+const layouts       = require('express-ejs-layouts');
+const mongoose      = require('mongoose');
+const dotenv        = require('dotenv');
+const cors          = require('cors');
+const session       = require('express-session');
+const passport      = require('passport');
+const bcrypt        = require('bcrypt');
+const LocalStrategy = require('passport-local').Strategy;
+const User          = require('./models/user-model');
 
 dotenv.config();
 mongoose.connect(process.env.MONGODB_URI);
@@ -31,7 +36,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
-app.use(cors());
+// app.use(cors());
+if (process.env.NODE_ENV !== 'production') {
+   app.use(cors({
+     credentials: true,
+     origin: ['http://localhost:4200', 'http://localhost:8000']
+   }));
+ }
+
+app.use(session({
+  secret: 'angular auth passport secret shh',
+  resave: true,
+  saveUninitialized: true,
+  cookie: { httpOnly: true, maxAge: 2419200000 }
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+const passportSetup = require('./config/passport');
+passportSetup(passport);
+
+const authRoutes = require('./routes/auth-routes');
+app.use('/', authRoutes);
 
 const projectsApi = require('./routes/projects-api');
 app.use('/api', projectsApi);

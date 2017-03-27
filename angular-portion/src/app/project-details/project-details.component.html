@@ -7,7 +7,14 @@
     <ul>
       <li><img src="{{ project.images }}"></li>
       <li>{{project.name}}</li>
+      <li>{{project.mediaType}}</li>
+      <li>{{project.fileType}}</li>
+      <li>{{project.colorOne}}</li>
       <li>{{project.desc}}</li>
+      <li>{{ project.dueDate | date:'EEE yyyyMMMdd' | uppercase }}</li>
+    </ul>
+    <ul>
+      <li>{{project}}</li>
     </ul>
   </div>
   <button (click)="deleteProject()">

@@ -11,7 +11,9 @@ import { ProjectRequestComponent } from './project-request/project-request.compo
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 
+import { SessionService } from './services/session.service';
 import { ProjectService } from './services/project.service';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ProjectService } from './services/project.service';
     LandingPageComponent,
     ProjectRequestComponent,
     ProjectListComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { ProjectService } from './services/project.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ProjectService],
+  providers: [SessionService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

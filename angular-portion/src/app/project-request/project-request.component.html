@@ -14,7 +14,7 @@
     <input type="checkbox" [(ngModel)]="formInfo.png" name="fileType[]" value="png"> PNG
     <input type="checkbox" [(ngModel)]="formInfo.vector" name="fileType[]" value="vector"> Vector
     <br>
-    <input type="color" [(ngModel)]="formInfo.colorOne" name="colorFirst">
+    <input type="color" id="colorOne" [(ngModel)]="formInfo.colorOne" name="colorFirst">
     <input type="color" [(ngModel)]="formInfo.colorTwo" name="colorSecond">
     <input type="color" [(ngModel)]="formInfo.colorThree" name="colorThird">
     <br>
@@ -25,25 +25,47 @@
     <input type="text" name="desc" [(ngModel)]="formInfo.desc" label="Description" placeholder="Description">
 
     <button (click)="addProject()">Submit</button>
+
   </form>
 </div>
 
 
-<!-- <div>
-  <form action="post" >
-    <label for="person"> Your name </label>
-    <input name="person" [(ngModel)]="newItem.person" type="text" placeholder="Your name">
+<!--
+<p>User ID: </p>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-4">
+  <h2>Create a New Scheduled Class</h2>
+  <table>
+    <tr>
+      <td>Date</td>
+      <td><input  type="text" [(ngModel)]="formInfo.date" name="date" placeholder="Date" required></td>
+    </tr>
+    <tr>
+      <td>Time</td>
+      <td><input  type="text" [(ngModel)]="formInfo.time" name="time" placeholder="Time" required></td>
+    </tr>
 
-    <label for="message"> Message </label>
-    <input name="message" [(ngModel)]="newItem.message" type="text" placeholder="Message">
-
-    <button (click) = "addThis()">Submit</button>
-  </form>
-</div>
-
-The list
-<ul *ngFor = "let item of theList">
-  <li>
-    <p>{{item.person}}, {{item.message}}</p>
-  </li>
-</ul> -->
+    <tr>
+      <td>Duration</td>
+      <td><input  type="text" [(ngModel)]="formInfo.duration" name="duration" placeholder="Duration (Minutes)" required></td>
+    </tr>
+    <tr>
+      <td>Rate</td>
+      <td><input type="text" [(ngModel)]="formInfo.rate" name="rate" required></td>
+    </tr>
+    <tr>
+      <td>Instrument</td>
+      <td><input type="text" [(ngModel)]="formInfo.instrument" name="instrument" placeholder="Instrument" required></td>
+    </tr>
+    <tr>
+      <td><button class="btn btn-primary" (click)="createNewItem(formInfo)">Create Schedule</button></td>
+      <button class="" (click)="isLoggedIn()">LoggedIn?</button>
+      <td></td>
+    </tr>
+  </table>
+  </div>
+  <div class="col-md-7">
+  </div>
+</div> -->

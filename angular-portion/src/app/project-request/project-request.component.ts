@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SessionService } from '../services/session.service';
 import { ProjectService } from '../services/project.service';
+import 'rxjs/add/operator/toPromise';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectRequestComponent implements OnInit {
   date: Object;
-  formInfo = {
+  person: any = {};
+  formInfo: any = {
     name: '',
     mediaType: '',
     fileType: '',
@@ -19,7 +21,8 @@ export class ProjectRequestComponent implements OnInit {
     images: '',
     colorOne: '',
     colorTwo: '',
-    colorThree: ''
+    colorThree: '',
+    requester: ''
   };
 
 
@@ -30,10 +33,16 @@ export class ProjectRequestComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.mySession.isLoggedIn()
+      .then((user) => {
+        this.person = user;
+      })
   }
 
-  addProject(newProject) {
-    console.log(this.formInfo);
+  addProject() {
+    this.formInfo.id = this.person._id;
+    this.formInfo.user = this.person._id;
+    console.log('person', this.person._id);
     this.myProjectService.addToList(this.formInfo)
     .then((apiResult) => {
       this.myNavigator.navigate(['/project-list']);
@@ -42,7 +51,8 @@ export class ProjectRequestComponent implements OnInit {
       console.log("Broke in request component", err);
     })
   }
-  //SPR
+
+
   isloggedin() {
     this.mySession.isLoggedIn();
   }

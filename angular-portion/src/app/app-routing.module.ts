@@ -5,6 +5,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectRequestComponent } from './project-request/project-request.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { UserProfileComponent } from './user-profile/user-profile.component'
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'project-list',
     component: ProjectListComponent
+  },
+  {
+    path: 'user-profile',
+    component: UserProfileComponent
   },
   {
     path: '**',

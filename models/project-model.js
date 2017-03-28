@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const projectSchema = new Schema({
+
+  id: String,
+  user: String,
   name: String,
   mediaType: [],
   fileType: [],
@@ -11,7 +14,9 @@ const projectSchema = new Schema({
   colorOne: String,
   colorTwo: String,
   colorThree: String,
-  dueDate: Date
+  dueDate: Date,
+  requester: String,
+  designer: String
 }, {
   timestamps: {
     createdAt:          "created_at",

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { SessionService } from '../services/session.service';
+import { UserProfileService } from '../services/user-profile.service'
 import { Router, ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-project-list',
@@ -10,8 +12,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProjectListComponent implements OnInit {
 
-  // items: Object;
   projects: Array<any> = [];
+  userProjects: Object = {};
+  accepteePerson: any = {};
 
   errorMessage: String = '';
 
@@ -19,7 +22,8 @@ export class ProjectListComponent implements OnInit {
     private myProjectService: ProjectService,
     private mySession: SessionService,
     private myRoute: ActivatedRoute,
-    private myNavigator: Router
+    private myNavigator: Router,
+    private myUserService: UserProfileService
   ) { }
 
   ngOnInit() {
@@ -30,11 +34,39 @@ export class ProjectListComponent implements OnInit {
     .catch((err) => {
       this.errorMessage = "There was an error"
     })
+    this.mySession.isLoggedIn()
+    .then((user) => {
+      this.accepteePerson = user;
+    })
+  }
+
+acceptProject(item) {
+  console.log('acceptProject', item);
+  const localItem = this.accepteePerson;
+  console.log('localItem', item);
+    this.myProjectService.saveThisShitToThatShit(item, localItem)
+    .then((apiResult) => {
+      // this.userProjects = apiResult;
+      // this.projects.push(this.userProjects);
+      // console.log('New project accepted');
+    })
   }
 
 }
 
-
+// scheduleRegister(item) {
+//     console.log('scheduleRegister', item);
+//     const localItem = this.person;
+//     console.log('localItem', item);
+//       this.mySchedule.register(item, localItem)
+//         // .toPromise()
+//         .then((apiResult) => {
+//
+//       })
+//       .catch((err) => {
+//         console.log('There was an issue registering for this class.');
+//       });
+//   }
 
 // import { Component, OnInit } from '@angular/core';
 // import { ScheduleService } from '../services/schedule.service';

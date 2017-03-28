@@ -19,7 +19,9 @@ router.post('/projects', (req, res, next) => {
     mediaType: req.body.mediaType,
     fileType: req.body.fileType,
     desc: req.body.desc,
-    images: req.body.images
+    images: req.body.images,
+    user: req.body.user,
+    requester: req.body.user
   });
 
   newProject.save((err) => {
@@ -63,6 +65,11 @@ router.delete('/projects/:id', (req, res, next) => {
     }
     res.json({ message: 'Project has been removed.' });
   });
+});
+
+router.post('/projects/:id', (req, res, next) => {
+  //do things
+  //fun things
 });
 
 module.exports = router;

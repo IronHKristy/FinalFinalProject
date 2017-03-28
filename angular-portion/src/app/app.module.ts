@@ -10,10 +10,11 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectRequestComponent } from './project-request/project-request.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 import { SessionService } from './services/session.service';
 import { ProjectService } from './services/project.service';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileService } from './services/user-profile.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [SessionService, ProjectService],
+  providers: [SessionService, ProjectService, UserProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

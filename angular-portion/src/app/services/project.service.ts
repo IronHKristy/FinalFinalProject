@@ -30,9 +30,41 @@ export class ProjectService {
   .toPromise()
   .then(apiResponse => apiResponse.json())
 }
+
+  saveThisShitToThatShit(item, id) {
+    const options = {withCredentials: true };
+
+    console.log(`${this.BASE_URL}/projects/${item}/${id._id}`)
+    return this.myHttp.post(`${this.BASE_URL}/projects/${item}/${id._id}`, item, options)
+      .toPromise()
+      .then(apiResponse => {
+        console.log('projects', apiResponse);
+        console.log('user._id', id._id);
+        return apiResponse;
+      })
+      .catch((err) => {
+        return err;
+      })
+  }
 }
 
-
+// register(item, id) {
+//   const options = { withCredentials: true };
+//   //Student to register to a class
+//   console.log(`${this.BASE_URL}/api/scheduleregister/${item}/${id._id}`)
+//   return this.myHttp.post(`${this.BASE_URL}/api/scheduleregister/${item}/${id._id}`, item, options)
+//     .toPromise()
+//     .then(apiResponse => {
+//       console.log('schedule-register', apiResponse);
+//       console.log('user._id', id._id);
+//       return apiResponse.json();
+//     })
+//     .catch((err) => {
+//       console.log('schedule-register-error', err);
+//       return err.json();
+//     })
+// //return;
+// }
 // import { Injectable } from '@angular/core';
 // import { Http } from '@angular/http';
 // import 'rxjs/add/operator/toPromise'

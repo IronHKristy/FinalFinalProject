@@ -64,7 +64,7 @@ const projectsApi = require('./routes/projects-api');
 app.use('/api', projectsApi);
 
 app.get('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname + '/notindex.html'));
+  res.sendFile(path.join(__dirname + '/public/notindex.html'));
 });
 
 // catch 404 and forward to error handler

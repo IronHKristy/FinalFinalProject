@@ -24,9 +24,12 @@
         <th scope="row">2</th>
         <td><img class="cap-image-size" src="{{oneProject.images}}"></td>
         <td>
-          <div class="color-box-one" ng-style="{'background-color': 'blue'}"> {{oneProject.colorOne}} </div>
-          <div class="color-box-one"> {{oneProject.colorTwo}} </div>
-          <div class="color-box-one"> {{oneProject.colorThree}} </div>
+
+
+
+          <div class="color-box-one" [style.backgroundColor]="oneProject.colorOne"> {{oneProject.colorOne}} </div>
+          <div class="color-box-one" [style.backgroundColor]="oneProject.colorTwo"> {{oneProject.colorTwo}} </div>
+          <div class="color-box-one" [style.backgroundColor]="oneProject.colorThree"> {{oneProject.colorThree}} </div>
         </td>
         <td>
           <a [routerLink]="['/project-details', oneProject._id]"><button>

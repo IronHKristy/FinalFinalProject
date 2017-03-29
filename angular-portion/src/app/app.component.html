@@ -5,17 +5,76 @@
   <ul>
     <li><a class="navbar-brand" routerLink='/'> <img src="../public/images/designMe.png"> </a></li>
 
-    <li><a class="navbar-brand" routerLink='/'> Home </a></li>
+    <li><a class="navbar-brand" routerLink='/home'> Home </a></li>
     <!-- <li><a class="navbar-brand" routerLink='/project-request'> Request </a></li>
     <li><a class="navbar-brand" routerLink='/project-list'> Design </a></li> -->
     <!-- <li><a class="navbar-brand" routerLink='/user-profile'> Profile </a></li> -->
-    <li><a *ngIf="user" class="navbar-brand profile-logo" routerLink='/user-profile'>{{user.username}}</a></li>
-    <!-- <li><a class="navbar-brand" routerLink='/'><button (click)="logout()"> Log Out </button></a></li> -->
+    <li><a class="navbar-brand float-navbar-items" routerLink='/'><button (click)="logout()"> Log Out </button></a></li>
+    <li><a *ngIf="user" class="navbar-brand float-navbar-items" routerLink='/user-profile'>{{user.username}}</a></li>
   </ul>
 </nav>
 
-<!-- fixed-top navbar-inverse bg-primary -->
 
-<router-outlet></router-outlet>
+<div class="index-main">
+  <router-outlet></router-outlet>
+
+<div class="container-fluid">
+<div class="row">
+
+  <div class="col-md-6 col-md-offset-3 form-main" *ngIf="!user">
+    <div class="form-body">
+        <ul class="nav nav-tabs final-login">
+          <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+          <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+        </ul>
+      <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+        <div class="innter-form">
+            <form action="/login" class="sa-innate-form" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" [(ngModel)]="loginInfo.username" id="the-username-input" placeholder="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="loginInfo.password" id="the-password-input" placeholder="password">
+            <button (click)="login()"> Log In </button>
+            <a href="">Forgot Password?</a>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+    		<ul>
+            <li><a href="/auth/facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="/auth/google"><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+			<div class="innter-form">
+            <form class="sa-innate-form" method="post">
+            <label for="username">Username</label>
+            <input id="username" type="text" [(ngModel)]="signupInfo.username" id="the-username-signup" name="username" placeholder="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="signupInfo.password" id="the-password-signup" placeholder="password">
+            <button (click)="signup()"> Sign Up </button>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
+			<ul>
+            <li><a href="/auth/facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="/auth/google"><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

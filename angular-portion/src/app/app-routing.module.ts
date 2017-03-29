@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectRequestComponent } from './project-request/project-request.component';
 import { ProjectListComponent } from './project-list/project-list.component';
@@ -8,8 +9,12 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { UserProfileComponent } from './user-profile/user-profile.component'
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: AppComponent
+  // },
   {
-    path: '',
+    path: 'home',
     component: LandingPageComponent
   },
   {

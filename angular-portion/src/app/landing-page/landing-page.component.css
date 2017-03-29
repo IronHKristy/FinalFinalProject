@@ -23,17 +23,17 @@
 }
 
 /*----------------------*/
-.form-main{
-  padding: 20px;
-}
-.form-body{
-    background:rgba(0, 0 ,0, 0.48);
-    width: 80%;
-    padding:20px;
-}
+  .form-main{
+    padding: 20px;
+  }
+  .form-body{
+      background:rgba(0, 0 ,0, 0.48);
+      width: 80%;
+      padding:20px;
+  }
 
-label {
-  color: white;
+  label {
+    color: white;
 }
 .login-form{
     background:rgba(255,255,255,0.8);

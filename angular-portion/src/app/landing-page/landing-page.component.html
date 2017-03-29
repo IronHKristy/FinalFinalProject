@@ -1,20 +1,19 @@
 
-<div class="index-main">
+<div>
 <div class="container-fluid">
 <div class="row">
 
-  <div class="col-md-6 vertical-center">
+  <div class="col-md-6 col-md-offset-3 vertical-center">
     <div *ngIf="user">
       <p class="error"> {{ error }} </p>
       <h1 class="design-me-text">design.Me</h1>
       <a routerLink="/project-list"><button type="button" name="button"> Design </button></a>
       <a routerLink="/project-request"><button type="button" name="button"> Request </button></a>
-      <button (click)="logout()"> Log Out </button>
     </div>
   </div>
 
 
-  <div class="col-md-6 form-main" *ngIf="!user">
+  <!-- <div class="col-md-6 form-main" *ngIf="!user">
     <div class="form-body">
         <ul class="nav nav-tabs final-login">
           <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
@@ -62,7 +61,7 @@
             </div>
         </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

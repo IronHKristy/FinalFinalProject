@@ -63,7 +63,7 @@ app.use('/', authRoutes);
 const projectsApi = require('./routes/projects-api');
 app.use('/api', projectsApi);
 
-router.get('/', (req, res, next) => {
+app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname + '/notindex.html'));
 });
 

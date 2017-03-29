@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class SessionService {
-  BASE_URL: string = '';
+  BASE_URL: string = 'www.designmee.co';
   constructor(private myHttp: Http) { }
 
   signup (user) {

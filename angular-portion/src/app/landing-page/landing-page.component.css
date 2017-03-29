@@ -8,6 +8,20 @@
   /*color: white;*/
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.design-me-text {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+
 /*----------------------*/
 .form-main{
   padding: 20px;

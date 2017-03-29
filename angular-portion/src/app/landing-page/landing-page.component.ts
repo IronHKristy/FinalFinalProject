@@ -35,6 +35,7 @@ export class LandingPageComponent implements OnInit {
       this.user = null;
       this.error = err;
     });
+
   }
 
   signup() {

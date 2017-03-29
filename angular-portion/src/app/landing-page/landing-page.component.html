@@ -2,64 +2,25 @@
 <div class="index-main">
 <div class="container-fluid">
 <div class="row">
-  <div class="col-md-6">
 
-
+  <div class="col-md-6 vertical-center">
     <div *ngIf="user">
       <p class="error"> {{ error }} </p>
+      <h1 class="design-me-text">design.Me</h1>
       <a routerLink="/project-list"><button type="button" name="button"> Design </button></a>
       <a routerLink="/project-request"><button type="button" name="button"> Request </button></a>
-
       <button (click)="logout()"> Log Out </button>
     </div>
-
-<!-- <div *ngIf="!user">
-  <form class="login">
-    <h2> Log In </h2>
-
-    <div>
-      <label for="the-username-input"> Username </label>
-      <input type="text" name="username" [(ngModel)]="loginInfo.username" id="the-username-input">
-    </div>
-
-    <div>
-      <label for="the-password-input"> Password </label>
-      <input type="password" name="password" [(ngModel)]="loginInfo.password" id="the-password-input">
-    </div>
-
-    <button (click)="login()"> Log In </button>
-  </form>
-
-  <form class="signup">
-    <h2> Sign Up </h2>
-
-    <div>
-      <label for="the-username-signup"> Username </label>
-      <input type="text" name="username" [(ngModel)]="signupInfo.username" id="the-username-signup">
-    </div>
-
-    <div>
-      <label for="the-password-signup"> Password </label>
-      <input type="password" name="password" [(ngModel)]="signupInfo.password" id="the-password-signup">
-    </div>
-
-    <button (click)="signup()"> Sign Up </button>
-  </form>
-</div> -->
-</div>
+  </div>
 
 
-
-
-
-
-    <div class="col-md-6 form-main" *ngIf="!user">
+  <div class="col-md-6 form-main" *ngIf="!user">
     <div class="form-body">
         <ul class="nav nav-tabs final-login">
-        <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
-        <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
-    </ul>
-    <div class="tab-content">
+          <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+          <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+        </ul>
+      <div class="tab-content">
         <div id="sectionA" class="tab-pane fade in active">
         <div class="innter-form">
             <form action="/login" class="sa-innate-form" method="post">
@@ -100,8 +61,8 @@
             </ul>
             </div>
         </div>
-    </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>

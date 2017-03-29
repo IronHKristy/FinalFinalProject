@@ -3,3 +3,7 @@
 ul {
   list-style: none;
 }
+
+.profile-logo {
+  float: right;
+}

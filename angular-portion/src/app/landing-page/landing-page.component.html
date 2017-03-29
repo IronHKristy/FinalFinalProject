@@ -1,24 +1,19 @@
-<a routerLink="/project-list"><button type="button" name="button"> Design </button></a>
-<a routerLink="/project-request"><button type="button" name="button"> Request </button></a>
+
+<div class="index-main">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-6">
 
 
-<p class="error"> {{ error }} </p>
+    <div *ngIf="user">
+      <p class="error"> {{ error }} </p>
+      <a routerLink="/project-list"><button type="button" name="button"> Design </button></a>
+      <a routerLink="/project-request"><button type="button" name="button"> Request </button></a>
 
+      <button (click)="logout()"> Log Out </button>
+    </div>
 
-<div *ngIf="user">
-  <h2> You are now logged in as {{ user.username }}!! </h2>
-  <p> Here's the user object </p>
-  <pre> {{ user | json }} </pre>
-
-  <p *ngIf="myData"> Here's some data fetched from a protected API </p>
-  <pre> {{ myData | json }} </pre>
-
-  <button (click)="logout()"> Log Out </button>
-  <button (click)="getPrivateData()"> Get private data </button>
-</div>
-
-
-<div *ngIf="!user">
+<!-- <div *ngIf="!user">
   <form class="login">
     <h2> Log In </h2>
 
@@ -50,4 +45,63 @@
 
     <button (click)="signup()"> Sign Up </button>
   </form>
+</div> -->
+</div>
+
+
+
+
+
+
+    <div class="col-md-6 form-main" *ngIf="!user">
+    <div class="form-body">
+        <ul class="nav nav-tabs final-login">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Sign In</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Join us!</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+        <div class="innter-form">
+            <form action="/login" class="sa-innate-form" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" [(ngModel)]="loginInfo.username" id="the-username-input" placeholder="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="loginInfo.password" id="the-password-input" placeholder="password">
+            <button (click)="login()"> Log In </button>
+            <a href="">Forgot Password?</a>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+    		<ul>
+            <li><a href="/auth/facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="/auth/google"><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+			<div class="innter-form">
+            <form class="sa-innate-form" method="post">
+            <label for="username">Username</label>
+            <input id="username" type="text" [(ngModel)]="signupInfo.username" id="the-username-signup" name="username" placeholder="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="signupInfo.password" id="the-password-signup" placeholder="password">
+            <button (click)="signup()"> Sign Up </button>
+            </form>
+            </div>
+            <div class="social-login">
+            <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
+			<ul>
+            <li><a href="/auth/facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+            <li><a href="/auth/google"><i class="fa fa-google-plus"></i> Google+</a></li>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SessionService } from './services/session.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  user: any;
 
-  constructor() {}
+  constructor(private mySession: SessionService) { }
 
   ngOnInit() {
-
+    this.mySession.isLoggedIn()
+      .then(userInfo => this.user = userInfo);
   }
 
 }

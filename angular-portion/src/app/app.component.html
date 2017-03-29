@@ -7,7 +7,7 @@
     <li><a class="navbar-brand" routerLink='/project-request'> Request </a></li>
     <li><a class="navbar-brand" routerLink='/project-list'> Design </a></li>
     <li><a class="navbar-brand" routerLink='/user-profile'> Profile </a></li>
-
+    <li><a *ngIf="user" class="navbar-brand" routerLink='/user-profile'>{{user.username}}</a></li>
   </ul>
 </nav>
 

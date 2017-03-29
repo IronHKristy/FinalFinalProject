@@ -41,63 +41,12 @@ export class ProjectListComponent implements OnInit {
   }
 
 acceptProject(item) {
-  console.log('acceptProject', item);
-  const localItem = this.accepteePerson;
-  console.log('localItem', item);
-    this.myProjectService.saveThisShitToThatShit(item, localItem)
+  console.log('The project id is', item);
+  const designer = this.accepteePerson;
+  console.log('designer', designer);
+    this.myProjectService.saveThisShitToThatShit(item, designer)
     .then((apiResult) => {
-      // this.userProjects = apiResult;
-      // this.projects.push(this.userProjects);
-      // console.log('New project accepted');
     })
   }
 
 }
-
-// scheduleRegister(item) {
-//     console.log('scheduleRegister', item);
-//     const localItem = this.person;
-//     console.log('localItem', item);
-//       this.mySchedule.register(item, localItem)
-//         // .toPromise()
-//         .then((apiResult) => {
-//
-//       })
-//       .catch((err) => {
-//         console.log('There was an issue registering for this class.');
-//       });
-//   }
-
-// import { Component, OnInit } from '@angular/core';
-// import { ScheduleService } from '../services/schedule.service';
-// import { SessionService } from '../services/session.service';
-// import { Router, ActivatedRoute } from '@angular/router';
-//
-// @Component({
-//   selector: 'app-schedule',
-//   templateUrl: './schedule.component.html',
-//   styleUrls: ['./schedule.component.css']
-// })
-// export class ScheduleComponent implements OnInit {
-//   //The item that will be queried from this component's service
-//   items: Object;
-//   //Store any errors that are generated
-//   errorMessage:         string;
-//   calendars: Array<any> = [];
-//
-//   constructor(
-//     private myService: ScheduleService,
-//     private mySession: SessionService,
-//     private myRoute: ActivatedRoute,
-//     private myNavigator: Router
-//   ) { }
-//
-//   ngOnInit() {
-//     // this.myRoute.params.subscribe((params) => {
-//     //   this.getDetails(params['id']);
-//     // });
-//     this.myService.getList()
-//       .then((item) => {
-//         this.calendars = item;
-//       })
-//   }

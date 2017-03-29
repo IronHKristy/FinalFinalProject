@@ -21,7 +21,8 @@ router.post('/projects', (req, res, next) => {
     desc: req.body.desc,
     images: req.body.images,
     user: req.body.user,
-    requester: req.body.user
+    requester: req.body.user,
+    designer: req.user._id
   });
 
   newProject.save((err) => {
@@ -35,6 +36,18 @@ router.post('/projects', (req, res, next) => {
       id: newProject._id
     });
   });
+});
+
+
+router.get('/projects/user', (req, res, next) => {
+  Project.find({ 'designer': '58d6c8a87858e4c722b71e0c' }, ((err, designerId) => {
+      if (err) {
+        res.json(err);
+        return;
+      }
+      return res.json(designerId);
+    })
+  );
 });
 
 router.get('/projects/:id', (req, res, next) => {
@@ -67,9 +80,24 @@ router.delete('/projects/:id', (req, res, next) => {
   });
 });
 
-router.post('/projects/:id', (req, res, next) => {
-  //do things
-  //fun things
+router.post('/projects/:item/:userid', (req, res, next) => {
+  const searchItem = req.params.item;
+  Project.findOne({ _id: searchItem }, (err, biggerTank) => {
+    if(err) {
+      res.json(err);
+      return;
+    }
+    const item = req.params.user;
+    biggerTank.designer = item;
+    console.log(biggerTank.designer);
+    biggerTank.save((err) => {
+      if(err) {
+        return err.json();
+      }
+      res.status(200).json({ message: 'Designer has accepted project'});
+      return;
+    });
+  });
 });
 
 module.exports = router;

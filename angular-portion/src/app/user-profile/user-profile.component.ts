@@ -11,75 +11,62 @@ import { SessionService } from '../services/session.service';
 })
 export class UserProfileComponent implements OnInit {
 
+  theUser: any = {};
+  lists: Array<any> = [];
+  errorMessage: String = '';
+
   constructor(
     private myRoute: ActivatedRoute,
     private myNavigator: Router,
-    private mySession: SessionService
+    private mySession: SessionService,
+    private myProjectService: ProjectService
   ) { }
 
   ngOnInit() {
+    this.mySession.isLoggedIn()
+    .then((user) => {
+      this.theUser = user;
+    })
   }
 
-showProject() {
-  const userProject = this.formInfo.requester;
-  console.log(userProject);
-}
+  // showProject() {
+  //   this.myProjectService.getThatShitForThatShit()
+  //   .then((projectsList) => {
+  //     this.projects = projectsList;
+  //     console.log(projectsList);
+  //   })
+  //   .catch((err) => {
+  //     this.errorMessage = "Error in user-profile-component"
+  //   })
+  // }
+
+  showProject() {
+    this.myProjectService.getThatShitForThatShit()
+    .then((projectsList) => {
+      this.lists = projectsList;
+      console.log(projectsList);
+    })
+    .catch((err) => {
+      this.errorMessage = "Error in user profile component ts"
+    })
+  }
 }
 
-
-// import { Component, OnInit } from '@angular/core';
-// import { TeacherService } from '../services/teacher.service';
-// import { ScheduleService } from '../services/schedule.service';
-// import { Router, ActivatedRoute } from '@angular/router';
-// import { SessionService } from '../services/session.service';
-//
-//
-// @Component({
-//   selector: 'app-teacher-detail',
-//   templateUrl: './teacher-detail.component.html',
-//   styleUrls: ['./teacher-detail.component.css']
-// })
-// export class TeacherDetailComponent implements OnInit {
-//
-//   items: Array<any> = [];
-//   person: Object = {};
-//   errorMessage: string;
-//   persons: Array<any> = [];
+// items: Object;
+//   //Store any errors that are generated
+//   errorMessage:         string;
 //   calendars: Array<any> = [];
-//   myCalendar: Array<any> = [];
 //
 //   constructor(
-//     private myService: TeacherService,
-//     private myRoute: ActivatedRoute,
-//     private mySchedule: ScheduleService,
-//     private myNavigator: Router,
-//     private mySession: SessionService
+//     private myService:  ScheduleService,
+//     private mySession:  SessionService,
+//     private myRoute:    ActivatedRoute,
+//     private myNavigator:Router
 //   ) { }
 //
 //   ngOnInit() {
-//     // this.myRoute.params.subscribe((params) => {
-//     //   this.getDetails(params['id']);
-//     // });
-//     this.mySession.isLoggedIn()
-//       .subscribe( (user) => {
-//         this.person = user.json();
-//         this.mySchedule.availableClass()
-//           .then( (classes) => { this.calendars = classes })
-//         this.mySchedule.myClass()
-//           .then((classes) => {this.myCalendar = classes })
-//      })
 //
-//   }
-//   getDetails(id) {
-//     this.myService.get(id)
-//       .then((apiResult) => {
-//         this.person = apiResult;
-//         this.items.push(this.person);
-//         console.log('Teach-Details-Component: ', this.items);
+//     this.myService.getList()
+//       .then((item) => {
+//         this.calendars = item;
 //       })
-//       .catch((err) => {
-//         console.log('Error ', err);
-//       });
-//   }
-//
-// }

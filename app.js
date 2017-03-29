@@ -63,8 +63,9 @@ app.use('/', authRoutes);
 const projectsApi = require('./routes/projects-api');
 app.use('/api', projectsApi);
 
-const index = require('./routes/index');
-app.use('/', index);
+router.get('/', (req, res, next) => {
+  res.sendFile(path.join(__dirname + '/notindex.html'));
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

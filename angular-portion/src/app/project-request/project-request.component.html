@@ -1,8 +1,69 @@
-<p>
-  request works!
-</p>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
 
-<div>
+<table class="table table-striped">
+
+  <tr>
+    <td>Project Name</td>
+    <td><input type="text" [(ngModel)]="formInfo.name" name="name" label="Name" placeholder="name"></td>
+  </tr>
+  <tr>
+    <td>Media Type</td>
+    <td>
+      <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="logo"> Logo
+      <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="ad"> Ad
+      <input type="radio" [(ngModel)]="formInfo.mediaType" name="mediaType[]" value="banner"> Banner
+    </td>
+  </tr>
+  <tr>
+    <td>File Type</td>
+    <td>
+      <input type="checkbox" [(ngModel)]="formInfo.jpg" name="fileType[]" value="jpg"> JPG
+      <input type="checkbox" [(ngModel)]="formInfo.png" name="fileType[]" value="png"> PNG
+      <input type="checkbox" [(ngModel)]="formInfo.vector" name="fileType[]" value="vector"> Vector
+    </td>
+  </tr>
+  <tr>
+    <td>Color Palette</td>
+    <td>
+      <input type="color" id="colorOne" [(ngModel)]="formInfo.colorOne" name="colorFirst">
+      <input type="color" [(ngModel)]="formInfo.colorTwo" name="colorSecond">
+      <input type="color" [(ngModel)]="formInfo.colorThree" name="colorThird">
+
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input id="picture-input" type="file" [(ngModel)]="formInfo.images"  name="picture">
+
+    </td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>
+      <input type="text" name="desc" [(ngModel)]="formInfo.desc" label="Description" placeholder="Description">
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button (click)="addProject()">Submit</button>
+
+    </td>
+  </tr>
+</table>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+<!-- Bye Table -->
+
+
+
+<!-- <div>
   <form action="post" method="post" enctype="multipart/form-data">
     <input type="text" [(ngModel)]="formInfo.name" name="name" label="Name" placeholder="name">
     <br>
@@ -27,46 +88,4 @@
     <button (click)="addProject()">Submit</button>
 
   </form>
-</div>
-
-
-
-<!--
-<p>User ID: </p>
-<div class="row">
-  <div class="col-md-1">
-  </div>
-  <div class="col-md-4">
-  <h2>Create a New Scheduled Class</h2>
-  <table>
-    <tr>
-      <td>Date</td>
-      <td><input  type="text" [(ngModel)]="formInfo.date" name="date" placeholder="Date" required></td>
-    </tr>
-    <tr>
-      <td>Time</td>
-      <td><input  type="text" [(ngModel)]="formInfo.time" name="time" placeholder="Time" required></td>
-    </tr>
-
-    <tr>
-      <td>Duration</td>
-      <td><input  type="text" [(ngModel)]="formInfo.duration" name="duration" placeholder="Duration (Minutes)" required></td>
-    </tr>
-    <tr>
-      <td>Rate</td>
-      <td><input type="text" [(ngModel)]="formInfo.rate" name="rate" required></td>
-    </tr>
-    <tr>
-      <td>Instrument</td>
-      <td><input type="text" [(ngModel)]="formInfo.instrument" name="instrument" placeholder="Instrument" required></td>
-    </tr>
-    <tr>
-      <td><button class="btn btn-primary" (click)="createNewItem(formInfo)">Create Schedule</button></td>
-      <button class="" (click)="isLoggedIn()">LoggedIn?</button>
-      <td></td>
-    </tr>
-  </table>
-  </div>
-  <div class="col-md-7">
-  </div>
 </div> -->

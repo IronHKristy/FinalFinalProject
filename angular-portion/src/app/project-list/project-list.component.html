@@ -1,6 +1,47 @@
 <div class="error" *ngIf="errorMessage"> {{errorMessage}} </div>
 
-<div>
+<div class="project-list" *ngFor="let oneProject of projects">
+  <table class="table table-hover table-color">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Project</th>
+        <th>Media</th>
+        <th>File Type</th>
+        <th>Due Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{oneProject.name}}</td>
+        <td>{{oneProject.mediaType}}</td>
+        <td>{{oneProject.fileType}}</td>
+        <td>{{oneProject.dueDate | date:'yyyyMMMdd'}}</td>
+
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><img class="cap-image-size" src="{{oneProject.images}}"></td>
+        <td>
+          <div class="color-box-one" ng-style="{'background-color': 'blue'}"> {{oneProject.colorOne}} </div>
+          <div class="color-box-one"> {{oneProject.colorTwo}} </div>
+          <div class="color-box-one"> {{oneProject.colorThree}} </div>
+        </td>
+        <td>
+          <a [routerLink]="['/project-details', oneProject._id]"><button>
+            View Details
+          </button></a>
+          <button (click)="acceptProject(oneProject._id)"> Design Me </button>
+        </td>
+      </tr>
+
+      <!-- <tr>{{oneProject.desc}}</tr> -->
+    </tbody>
+  </table>
+</div>
+
+<!-- <div>
   <div class="project-list" *ngFor="let oneProject of projects">
     <h3> {{oneProject.name}} </h3>
     <img class="cap-image-size" src="{{ oneProject.images }}">
@@ -23,4 +64,4 @@
       <button (click)="acceptProject(oneProject._id)"> Design Me </button>
 
   </div>
-</div>
+</div> -->

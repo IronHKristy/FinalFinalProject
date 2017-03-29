@@ -63,8 +63,8 @@ app.use('/', authRoutes);
 const projectsApi = require('./routes/projects-api');
 app.use('/api', projectsApi);
 
-// const index = require('./routes/index');
-// app.use('/', index);
+const index = require('./routes/index');
+app.use('/', index);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

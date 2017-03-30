@@ -4,7 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class UserProfileService {
-  BASE_URL: string = 'www.designmee.co';
+  BASE_URL: string = '';
 
   constructor(private myHttp: Http) { }
   get(id) {

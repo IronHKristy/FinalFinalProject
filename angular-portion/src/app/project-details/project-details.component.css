@@ -1,3 +1,22 @@
 ul {
   list-style: none;
 }
+
+table {
+  color: white;
+}
+
+.color-box-one {
+  height: 100px;
+  width: 100px;
+  border: 7px solid rgba(14, 80, 77, 0.22);
+}
+
+.nav-button {
+  background-color: rgba(0,0,0,0.34);
+  color: white;
+  font-size: 30px;
+  height: 100px;
+  width: 194px;
+  text-align: center;
+}

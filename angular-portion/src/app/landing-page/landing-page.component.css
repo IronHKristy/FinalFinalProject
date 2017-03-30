@@ -143,3 +143,11 @@
       font-size:13px;
       padding-top:10px;
   }
+
+  .nav-button {
+    background-color: rgba(0,0,0,0.34);
+    color: white;
+    font-size: 30px;
+    height: 100px;
+    width: 194px;
+  }

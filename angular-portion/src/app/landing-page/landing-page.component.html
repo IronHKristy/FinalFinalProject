@@ -6,9 +6,12 @@
   <div class="col-md-6 col-md-offset-3 vertical-center">
     <div *ngIf="user">
       <p class="error"> {{ error }} </p>
-      <h1 class="design-me-text">design.Me</h1>
-      <a routerLink="/project-list"><button type="button" name="button" class="btn btn-primary"> Design </button></a>
-      <a routerLink="/project-request"><button type="button" name="button" class="btn btn-primary"> Request </button></a>
+      <!-- <h1 class="design-me-text">design.Me</h1> -->
+      <img src="../assets/designmelogo.png">
+      <br>
+      <a routerLink="/project-list"><button type="button" name="button" class="nav-button"> Design </button></a>
+      <a routerLink="/project-request"><button type="button" name="button" class="nav-button"> Request </button></a>
+      <!-- <a routerLink="/project-request">Request</a> -->
     </div>
   </div>
 

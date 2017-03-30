@@ -1,7 +1,8 @@
-<div class="error" *ngIf="errorMessage"> {{errorMessage}} </div>
+<!-- <div class="error" *ngIf="errorMessage"> {{errorMessage}} </div>
 
-<div class="project-list" *ngFor="let oneProject of projects">
-  <table class="table table-hover table-color">
+
+<div class="project-list" >
+  <table class="table">
     <thead>
       <tr>
         <th>#</th>
@@ -11,7 +12,7 @@
         <th>Due Date</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody *ngFor="let oneProject of projects">
       <tr>
         <th scope="row">1</th>
         <td>{{oneProject.name}}</td>
@@ -39,32 +40,59 @@
         </td>
       </tr>
 
-      <!-- <tr>{{oneProject.desc}}</tr> -->
     </tbody>
   </table>
-</div>
+</div> -->
 
-<!-- <div>
-  <div class="project-list" *ngFor="let oneProject of projects">
-    <h3> {{oneProject.name}} </h3>
-    <img class="cap-image-size" src="{{ oneProject.images }}">
-    <p> {{oneProject.desc }} </p>
-    <p> Media type: {{oneProject.mediaType }} </p>
-    <p> File type: {{oneProject.fileType }} </p>
-    <p> {{oneProject.dueDate | date:'yyyyMMMdd'}} </p>
+<div class="container-fluid table">
 
-    <div>
-      <div class="color-box-one" ng-style="{'background-color': 'blue'}"> {{oneProject.colorOne}} </div>
-      <div class="color-box-one"> {{oneProject.colorTwo}} </div>
-      <div class="color-box-one"> {{oneProject.colorThree}} </div>
+  <div class="row top-row">
+    <div class="col-md-3">
+      <h5>Project</h5>
     </div>
+    <div class="col-md-3">
+      <h5>Media Type</h5>
+    </div>
+    <div class="col-md-3">
+      <h5>File Type</h5>
+    </div>
+    <div class="col-md-3">
+      <h5>Due Date</h5>
+    </div>
+  </div>
 
-
+<div *ngFor="let oneProject of projects">
+  <div class="row">
+    <div class="col-md-3">
+      <p>{{oneProject.name}}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{oneProject.mediaType}}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{oneProject.fileType}}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{oneProject.dueDate | date:'yyyyMMMdd'}}</p>
+    </div>
+  </div>
   <br>
+  <div class="row bottom-row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div class="color-box-one" [style.backgroundColor]="oneProject.colorOne"> {{oneProject.colorOne}} </div>
+      <div class="color-box-one" [style.backgroundColor]="oneProject.colorTwo"> {{oneProject.colorTwo}} </div>
+      <div class="color-box-one" [style.backgroundColor]="oneProject.colorThree"> {{oneProject.colorThree}} </div>
+    </div>
+    <div class="col-md-3">
       <a [routerLink]="['/project-details', oneProject._id]"><button>
         View Details
       </button></a>
+      <br>
       <button (click)="acceptProject(oneProject._id)"> Design Me </button>
-
+    </div>
   </div>
-</div> -->
+</div>
+
+</div>

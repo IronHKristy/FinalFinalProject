@@ -5,15 +5,21 @@
 .color-box-one {
   display: inline;
   float: left;
-  height: 50px;
-  width: 50px;
-  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  border: 7px solid rgba(14, 80, 77, 0.22);
 }
 
-.table-color {
-  background-color: white;
-}
 .table {
-  background-color: white;
-  
+  background-color: rgba(0,0,0,0.38);
+  color: white;
+}
+
+.top-row {
+  background-color: rgba(0,0,0,0.48);
+}
+
+.bottom-row {
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }

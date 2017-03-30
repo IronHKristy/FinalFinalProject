@@ -3,7 +3,7 @@ body {
 }
 
 button {
-  background-color: rgba(0,0,0,0.38);
+  background-color: rgba(0,0,0,0.02);
   color: white;
   border-radius: 1px;
   border-style: none;
@@ -120,6 +120,10 @@ label {
 	width:100%;
 	margin:8px 0;
 
+}
+
+.navbar {
+  margin-bottom: 1px;
 }
 .sa-innate-form input[type=submit]{
     border:1px solid#c63840;

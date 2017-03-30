@@ -1,3 +1,14 @@
+body {
+  background-image: url(../assets/bg2.jpg);
+}
+
+button {
+  background-color: rgba(0,0,0,0.38);
+  color: white;
+  border-radius: 1px;
+  border-style: none;
+}
+
 .index-main {
   /*margin-top: -50px;*/
   height: 100vh;
@@ -5,7 +16,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*color: white;*/
 }
 
 
@@ -15,6 +25,10 @@ ul {
 
 .float-navbar-items {
   float: right;
+}
+
+.navbar-brand {
+  color: white;
 }
 
 /*----------------------*/
@@ -33,7 +47,7 @@ label {
 .login-form{
     background:rgba(255,255,255,0.8);
 	padding:20px;
-	border-top:3px solid#3e4043;
+	border-top:3px solid #3e4043;
 }
 .innter-form{
 	padding-top:20px;
@@ -51,7 +65,7 @@ label {
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
     color: #fff;
-    background-color: #ff5749;
+    background-color: #c63840;
     border: none !important;
     border-bottom-color: transparent;
 	border-radius:none !important;
@@ -93,7 +107,7 @@ label {
 	background:#3b5998;
 }
 .social-login ul li:nth-child(2) a{
-	background:#e74c3d;
+	background:#c63840;
 }
 .social-login ul li:nth-child(3) a{
 	background:#3698d9;
@@ -108,22 +122,22 @@ label {
 
 }
 .sa-innate-form input[type=submit]{
-    border:1px solid#e64b3b;
-	background:#e64b3b;
+    border:1px solid#c63840;
+	background:#c63840;
 	color:#fff;
 	padding:10px 25px;
 	font-size:14px;
 	margin-top:5px;
 	}
 	.sa-innate-form input[type=submit]:hover{
-	border:1px solid#db3b2b;
-	background:#db3b2b;
+	border:1px solid#c63840;
+	background:#c63840;
 	color:#fff;
 	}
 
 	.sa-innate-form button{
-	border:1px solid#ff5749;
-	background:#ff5749;
+	border:1px solid#c63840;
+	background:#c63840;
 	color:#fff;
 	padding:10px 25px;
 	font-size:14px;

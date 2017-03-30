@@ -75,20 +75,20 @@ projects = [{
 //   });
 // });
 
-Projects.create(projects, (err, newDocs) => {
-  if (err) {
-    throw err;
-  }
-
-  newDocs.forEach((doc) => {
-    doc.save((err) => {
-      if (err) {
-        throw err;
-      }
-    });
-  });
-});
-
-
-
-setTimeout(() => { mongoose.connection.close(); }, 2000);
+// Projects.create(projects, (err, newDocs) => {
+//   if (err) {
+//     throw err;
+//   }
+//
+//   newDocs.forEach((doc) => {
+//     doc.save((err) => {
+//       if (err) {
+//         throw err;
+//       }
+//     });
+//   });
+// });
+//
+//
+//
+// setTimeout(() => { mongoose.connection.close(); }, 2000);

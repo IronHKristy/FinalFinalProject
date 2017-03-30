@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Kigs Gym Logo",
+    "mediaType": "logo",
+    "fileType": 'jpg',
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "https://www.smokeylemon.com/assets/photogallery/graphic-design/_resampled/FillWyIyNTAiLCIyNTAiXQ/jungle-kids-logo.png",
+    "colorOne": "#F633FF",
+    "colorTwo": "#00ff00",
+    "colorThree": "#0033cc",
+    "dueDate": "1/2/2017"
+  },
+  {
+    "name": "Course Program Ad",
+    "mediaType": "banner",
+    "fileType": 'png',
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/profile/photos/16050021/original/Graphic-Design-Course.jpg",
+    "colorOne": "#00ffff",
+    "colorTwo": "#ff33cc",
+    "colorThree": "#33FFC4",
+    "dueDate": "1/2/2017"
+  },
+  {
+    "name": "Wynwood Logo",
+    "mediaType": "logo",
+    "fileType": "vector",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "https://s-media-cache-ak0.pinimg.com/736x/2f/12/de/2f12de371a3f3abda14db654043827c6.jpg",
+    "colorOne": "#00ffff",
+    "colorTwo": "#ff33cc",
+    "colorThree": "#cccc00",
+    "dueDate": "1/2/2017"
+  },
+  {
+    "name": "Adidas Advertisement",
+    "mediaType": "ad",
+    "fileType": "png",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "http://assortedimages.com/wp-content/uploads/2016/10/adidas-Supershell-2.jpg",
+    "colorOne": "#FF5733",
+    "colorTwo": "#ff33cc",
+    "colorThree": "#33FFC4",
+    "dueDate": "1/2/2017"
+  },
+  {
+    "name": "Contest Entry Banner",
+    "mediaType": "banner",
+    "fileType": "jpg",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "https://cdn6.f-cdn.com/contestentries/15754/4122772/514b3b67bc0eb_thumb900.jpg",
+    "colorOne": "#00ffff",
+    "colorTwo": "#ff33cc",
+    "colorThree": "#F633FF",
+    "dueDate": "1/2/2017"
+  },
+  {
+    "name": "Shopify Ad",
+    "mediaType": "ad",
+    "fileType": "png",
+    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "images": "https://cdn.shopify.com/s/files/1/0301/3133/files/blog_skill-builder-250-ad.png?13007",
+    "colorOne": "#33FFC4",
+    "colorTwo": "#FF5733",
+    "colorThree": "#cccc00",
+    "dueDate": "1/2/2017"
+  }
+]

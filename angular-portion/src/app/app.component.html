@@ -1,19 +1,29 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <body>
-<nav class="navbar">
-  <ul>
-    <!-- <li><a class="navbar-brand" routerLink='/'> <img src="../public/images/designMe.png"> </a></li> -->
 
-    <li><a class="navbar-brand" routerLink='/home'> Home </a></li>
-    <!-- <li><a class="navbar-brand" routerLink='/project-request'> Request </a></li>
-    <li><a class="navbar-brand" routerLink='/project-list'> Design </a></li> -->
-    <!-- <li><a class="navbar-brand" routerLink='/user-profile'> Profile </a></li> -->
-    <li><a class="navbar-brand float-navbar-items" routerLink='/'><button (click)="logout()"> Log Out </button></a></li>
-    <li><a *ngIf="user" class="navbar-brand float-navbar-items" routerLink='/user-profile'>{{user.username}}</a></li>
-  </ul>
-</nav>
+<div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+  <div class="w-container">
+    <a class="logo w-nav-brand" routerLink="/home"><img class="logo w-nav-brand" src="../assets/logo.png"></a>
+    <nav class="mobile-menu w-nav-menu">
+      <a class="nav-link w-nav-link" routerLink='/'><button (click)="logout()"> Log Out </button></a>
+      <a *ngIf="user" class="nav-link w-nav-link" routerLink='/user-profile'>{{user.username}}</a>
+      <a class="nav-link w-nav-link" routerLink="/project-list">Design</a>
+      <a class="nav-link w-nav-link" routerLink="/project-request">Request</a>
+    </nav>
+  </div>
+</div>
 
+<a class="logo w-nav-brand" href="/"><img src="https://logo.svg"></a>
+<!-- <nav class="mobile-menu w-nav-menu" role="navigation">
+
+<a class="nav-link w-nav-link" href="/services">services</a>
+<a class="nav-link w-nav-link" href="/work">work</a>
+<a class="nav-link w-nav-link" href="/story">our story</a>
+<a class="nav-link w-nav-link" href="/blog">blog</a>
+<a class="button cta nav-button w-button" href="http://cowlickappeal.com/#contact">Contact Us</a>
+
+</nav> -->
 
 <div class="index-main">
   <router-outlet></router-outlet>

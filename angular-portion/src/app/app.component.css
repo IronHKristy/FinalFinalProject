@@ -1,35 +1,97 @@
-body {
-  background-image: url(../assets/bg2.jpg);
-}
-
-button {
-  background-color: rgba(0,0,0,0.02);
-  color: white;
-  border-radius: 1px;
-  border-style: none;
-}
-
 .index-main {
-  /*margin-top: -50px;*/
-  height: 100vh;
-  background: url('https://i.ytimg.com/vi/F3I0wRGAkxo/maxresdefault.jpg');
+  height: 86vh;
+  background-image: url(../assets/main-bg.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: fixed;
+  min-width: 100vw;
+  margin-top: 100px;
+  overflow: scroll;
 }
 
 
-ul {
-  list-style: none;
+/*---------------------------*/
+
+.nav{
+  position: fixed;
+  height: 14vh;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid hsla(0, 0%, 87%, .74);
+  background-color: #fff;
 }
 
-.float-navbar-items {
+.w-nav {
+  background: #dddddd;
+  z-index: 1000;
+}
+
+.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+.logo {
+  width: 209px;
+}
+
+.w-nav-brand {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #333333;
+  /*width: 130px;*/
+}
+
+.w-nav-menu {
+    position: relative;
+    float: right;
+}
+
+.nav-link {
+  padding: 18px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 300ms ease;
+  font-family: 'Open Sans', sans-serif;
+  color: #5c5c5c;
+  text-transform: uppercase;
+}
+
+.w-nav-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #222222;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link:hover {
+  border-bottom-color: #ff5749;
+}
+
+.nav-link.w--current {
+  border-bottom-color: #ff5749;
+  color: #ff5749;
+}
+
+/*.float-navbar-left {
+  float: left;
+}*/
+/*.float-navbar-items {
   float: right;
-}
+}*/
 
-.navbar-brand {
-  color: white;
-}
+
 
 /*----------------------*/
 .form-main{
@@ -37,7 +99,6 @@ ul {
 }
 .form-body{
     background:rgba(0, 0 ,0, 0.48);
-    width: 80%;
     padding:20px;
 }
 
@@ -125,8 +186,9 @@ label {
 .navbar {
   margin-bottom: 1px;
 }
+
 .sa-innate-form input[type=submit]{
-    border:1px solid#c63840;
+  border:1px solid#c63840;
 	background:#c63840;
 	color:#fff;
 	padding:10px 25px;
@@ -153,6 +215,6 @@ label {
 	color:#fff;
 	}
   .sa-innate-form p{
-      font-size:13px;
-      padding-top:10px;
+    font-size:13px;
+    padding-top:10px;
   }

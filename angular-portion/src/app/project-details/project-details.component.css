@@ -1,16 +1,19 @@
-/*.bgimage {
-  background-image: url(../../assets/main2-bg.png);
-  min-height: 86vh;
-}*/
+.top-row {
+  margin-top: 10px;
+}
 
 ul {
   list-style: none;
 }
 
-table {
+.project-details {
   color: white;
 }
 
+.italicize {
+  font-family: 'Dancing Script', cursive;
+  font-size: 79px;
+}
 .all-color-boxes {
   height: 86vh;
 }
@@ -30,3 +33,32 @@ table {
   width: 194px;
   text-align: center;
 }
+
+
+/*.hexagon {
+  position: relative;
+  width: 150px;
+  height: 86.60px;
+  background-color: #64C7CC;
+  margin: 43.30px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 43.30px solid #64C7CC;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 43.30px solid #64C7CC;
+}*/

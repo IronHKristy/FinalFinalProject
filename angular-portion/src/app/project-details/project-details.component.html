@@ -1,23 +1,18 @@
-<div class="bgimage">
-
-<div class="row">
-  <div class="col-md-1">
-  </div>
-  <!-- <div class="col-md-2">
-    <table class="table">
-      <tr>
-        <td><div class="color-box-one" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div></td>
-      </tr>
-      <tr>
-        <td><div class="color-box-one" [style.backgroundColor]="project.colorTwo"> {{project.colorTwo}} </div></td>
-      </tr>
-      <tr>
-        <td><div class="color-box-one" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div></td>
-      </tr>
-    </table>
+<div class="row top-row">
+  <!-- <div class="col-md-1">
   </div> -->
 
-  <div class="col-md-2 all-color-boxes">
+
+  <!-- <div class="col-md-2 all-color-boxes">
+    <br>
+        <div class="hexagon" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div>
+    <br>
+        <div class="hexagon" [style.backgroundColor]="project.colorTwo"> {{project.colorTwo}} </div>
+    <br>
+        <div class="hexagon" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div>
+  </div> -->
+
+  <div class="col-md-2 col-md-offset-1 all-color-boxes">
     <br>
         <div class="color-box-one" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div>
     <br>
@@ -26,37 +21,14 @@
         <div class="color-box-one" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div>
   </div>
 
-  <div class="col-md-1">
-  </div>
-  <div class="col-md-8">
-    <table class="table table">
-      <tr>
-        <td>Title</td>
-        <td>{{project.name}}</td>
-      </tr>
-      <tr>
-        <td>Description</td>
-        <td>{{project.desc}}</td>
-      </tr>
-      <tr>
-        <td>Media Type</td>
-        <td>{{project.mediaType}}</td>
-      </tr>
-      <tr>
-        <td>File Type</td>
-        <td>{{project.fileType}}</td>
-      </tr>
-      <tr>
-        <td>Due Date</td>
-        <td>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-    </table>
 
+  <div class="col-md-7 col-md-offset-1 project-details">
+        <p class="italicize">{{project.name}}</p>
+        <p>{{project.desc}}</p>
+        <p>{{project.mediaType}}</p>
+        <p>{{project.fileType}}</p>
+        <p>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</p>
   </div>
-</div>
 
 <div class="row">
   <div class="col-md-4 col-md-offset-4">

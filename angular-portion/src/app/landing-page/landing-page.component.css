@@ -1,17 +1,9 @@
-.index-main {
-  /*margin-top: -50px;*/
-  height: 100vh;
-  background: url('https://i.ytimg.com/vi/F3I0wRGAkxo/maxresdefault.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*color: white;*/
-}
 
 
+/*
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+  min-height: 100%;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
@@ -23,7 +15,6 @@
   text-align: center;
 }
 
-/*----------------------*/
   .form-main{
     padding: 20px;
   }
@@ -151,4 +142,4 @@
     font-size: 30px;
     height: 100px;
     width: 194px;
-  }
+  }*/

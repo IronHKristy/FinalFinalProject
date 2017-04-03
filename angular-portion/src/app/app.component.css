@@ -1,6 +1,7 @@
 .index-main {
   height: 86vh;
   background-image: url(../assets/main-bg.png);
+  /*z-index: 1;*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,7 +27,7 @@
 }
 
 .w-nav {
-  background: #dddddd;
+  background: #ffffff;
   z-index: 1000;
 }
 

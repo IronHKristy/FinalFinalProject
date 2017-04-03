@@ -1,8 +1,10 @@
+<div class="bgimage">
+
 <div class="row">
   <div class="col-md-1">
   </div>
-  <div class="col-md-2">
-    <table class="table table">
+  <!-- <div class="col-md-2">
+    <table class="table">
       <tr>
         <td><div class="color-box-one" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div></td>
       </tr>
@@ -13,7 +15,17 @@
         <td><div class="color-box-one" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div></td>
       </tr>
     </table>
+  </div> -->
+
+  <div class="col-md-2 all-color-boxes">
+    <br>
+        <div class="color-box-one" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div>
+    <br>
+        <div class="color-box-one" [style.backgroundColor]="project.colorTwo"> {{project.colorTwo}} </div>
+    <br>
+        <div class="color-box-one" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div>
   </div>
+
   <div class="col-md-1">
   </div>
   <div class="col-md-8">
@@ -50,4 +62,6 @@
   <div class="col-md-4 col-md-offset-4">
     <button class="nav-button" (onclick)="deleteProject()">Submit</button>
   </div>
+</div>
+
 </div>

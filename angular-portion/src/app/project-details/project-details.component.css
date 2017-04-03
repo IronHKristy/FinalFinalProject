@@ -1,3 +1,8 @@
+/*.bgimage {
+  background-image: url(../../assets/main2-bg.png);
+  min-height: 86vh;
+}*/
+
 ul {
   list-style: none;
 }
@@ -6,11 +11,16 @@ table {
   color: white;
 }
 
+.all-color-boxes {
+  height: 86vh;
+}
+
 .color-box-one {
-  height: 100px;
-  width: 100px;
+  height: 25%;
+  width: 90%;
   border: 7px solid rgba(14, 80, 77, 0.22);
 }
+
 
 .nav-button {
   background-color: rgba(0,0,0,0.34);

@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
 <body>
 
 <div class="nav w-nav" data-animation="default" data-collapse="medium" data-duration="400">
   <div class="w-container">
-    <a class="logo w-nav-brand" routerLink="/home"><img class="logo w-nav-brand" src="../assets/logo.png"></a>
+
+
+    <a class="nav-link w-nav-link" routerLink="/home">Home</a>
+
+    <!-- <a class="logo w-nav-brand" routerLink="/home"><img class="logo w-nav-brand" src="../assets/monkey.png"></a> -->
     <nav class="mobile-menu w-nav-menu">
       <a class="nav-link w-nav-link" routerLink='/'><button (click)="logout()"> Log Out </button></a>
       <a *ngIf="user" class="nav-link w-nav-link" routerLink='/user-profile'>{{user.username}}</a>

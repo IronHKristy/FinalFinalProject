@@ -11,7 +11,8 @@ ul {
 }
 
 .italicize {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Lobster Two', cursive;
+  text-transform: lowercase;
   font-size: 79px;
 }
 .all-color-boxes {
@@ -42,7 +43,6 @@ ul {
   background-color: #64C7CC;
   margin: 43.30px 0;
 }
-
 .hexagon:before,
 .hexagon:after {
   content: "";
@@ -51,12 +51,10 @@ ul {
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
 }
-
 .hexagon:before {
   bottom: 100%;
   border-bottom: 43.30px solid #64C7CC;
 }
-
 .hexagon:after {
   top: 100%;
   width: 0;

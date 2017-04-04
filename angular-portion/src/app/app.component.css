@@ -86,13 +86,10 @@
   color: #ff5749;
 }
 
-/*.float-navbar-left {
-  float: left;
-}*/
-/*.float-navbar-items {
-  float: right;
-}*/
-
+.logout-button {
+  background-color: none;
+  border: none;
+}
 
 
 /*----------------------*/

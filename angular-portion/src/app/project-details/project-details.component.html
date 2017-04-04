@@ -4,15 +4,27 @@
 
   <div class="col-md-2 col-md-offset-1 all-color-boxes">
     <br>
-        <div class="color-box-one" [style.backgroundColor]="project.colorOne"> {{project.colorOne}} </div>
+        <div class="color-palette" [style.backgroundColor]="project.colorOne">
+          <div class="middle">
+           <div class="text">{{project.colorOne}}</div>
+         </div>
+       </div>
     <br>
-        <div class="color-box-one" [style.backgroundColor]="project.colorTwo"> {{project.colorTwo}} </div>
+        <div class="color-palette" [style.backgroundColor]="project.colorTwo">
+          <div class="middle">
+           <div class="text">{{project.colorTwo}}</div>
+         </div>
+       </div>
     <br>
-        <div class="color-box-one" [style.backgroundColor]="project.colorThree"> {{project.colorThree}} </div>
+        <div class="color-palette" [style.backgroundColor]="project.colorThree">
+          <div class="middle">
+           <div class="text">{{project.colorThree}}</div>
+         </div>
+       </div>
   </div>
 
 
-  <div class="col-md-7 col-md-offset-1 project-details">
+  <div class="col-md-7 col-md-offset-1 project-details all-color-boxes">
         <p class="italicize">{{project.name}}</p>
         <p>{{project.desc}}</p>
         <p>{{project.mediaType}}</p>
@@ -20,10 +32,12 @@
         <p>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</p>
   </div>
 
-<div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <button class="nav-button" (onclick)="deleteProject()">Submit</button>
+<div class="row submit-bar">
+  <!-- <div class="col-md-4 col-md-offset-4"> -->
+  <div class="col-md-10 col-md-offset-1">
+    <button class="nav-button" (onclick)="deleteProject()">----------&gt;  contribute to this project  &lt;----------</button>
   </div>
+  <!-- </div> -->
 </div>
 
 </div>

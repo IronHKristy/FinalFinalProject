@@ -8,12 +8,11 @@
 
     <a class="nav-link w-nav-link" routerLink="/home">Home</a>
 
-    <!-- <a class="logo w-nav-brand" routerLink="/home"><img class="logo w-nav-brand" src="../assets/monkey.png"></a> -->
     <nav class="mobile-menu w-nav-menu">
-      <a class="nav-link w-nav-link" routerLink='/'><button (click)="logout()"> Log Out </button></a>
-      <a *ngIf="user" class="nav-link w-nav-link" routerLink='/user-profile'>{{user.username}}</a>
       <a class="nav-link w-nav-link" routerLink="/project-list">Design</a>
       <a class="nav-link w-nav-link" routerLink="/project-request">Request</a>
+      <a *ngIf="user" class="nav-link w-nav-link" routerLink='/user-profile'>{{user.username}}</a>
+      <a class="nav-link w-nav-link logout-button" routerLink='/'><button (click)="logout()"> log out </button></a>
     </nav>
   </div>
 </div>

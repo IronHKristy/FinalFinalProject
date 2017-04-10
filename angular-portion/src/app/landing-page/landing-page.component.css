@@ -3,7 +3,7 @@
 }
 
 .transparent-table {
-  /*background:rgba(0, 0 ,0, 0.48);*/
+  margin-top: 200px;
   padding:40px;
   color: white;
   text-align: center;
@@ -12,9 +12,29 @@
 .fancy-text {
   font-family: 'Lobster Two', cursive;
   text-transform: lowercase;
-  font-size: 30px;
+  font-size: 85px;
 }
 
-.title-text {
-  font-size: 50px;
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  border-radius: 40px;
+  border: 10px solid rgba(39, 16, 53, 0.56);
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 18px;
+  -webkit-transition: all 500ms ease;
+
+}
+
+span:hover {
+  background-color: rgba(57, 37, 70, 0.68)
 }

@@ -78,12 +78,7 @@
 }
 
 .nav-link:hover {
-  border-bottom-color: #ff5749;
-}
-
-.nav-link.w--current {
-  border-bottom-color: #ff5749;
-  color: #ff5749;
+  border-bottom-color: #4f2256;
 }
 
 .logout-button {

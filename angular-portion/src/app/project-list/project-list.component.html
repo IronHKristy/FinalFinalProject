@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 portfolio-item" *ngFor="let oneProject of projects">
-                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                <a [routerLink]="['/project-details', oneProject._id]" class="portfolio-link" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
-                          <a class="link-text" [routerLink]="['/project-details', oneProject._id]">View Details</a>
+                          <span class="link-text">View Details</span>
                         </div>
                     </div>
                     <div class="color-box-one" [style.backgroundColor]="oneProject.colorOne"></div>

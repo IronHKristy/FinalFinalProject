@@ -15,6 +15,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SessionService } from './services/session.service';
 import { ProjectService } from './services/project.service';
 import { UserProfileService } from './services/user-profile.service';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { UserProfileService } from './services/user-profile.service';
     ProjectRequestComponent,
     ProjectListComponent,
     ProjectDetailsComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserLoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

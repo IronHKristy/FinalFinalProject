@@ -97,6 +97,7 @@ section h3.section-subheading {
   background-color: #ffffff;
   text-align: center;
   padding: 25px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
   text-transform: none;

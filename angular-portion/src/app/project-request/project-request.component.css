@@ -11,6 +11,9 @@
      color: white;
  }
 
+input {
+  color: black;
+}
  button {
    background-color: rgba(0,0,0,0.38);
    color: white;

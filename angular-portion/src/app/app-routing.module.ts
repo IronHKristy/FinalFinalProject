@@ -7,6 +7,8 @@ import { ProjectRequestComponent } from './project-request/project-request.compo
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { UserProfileComponent } from './user-profile/user-profile.component'
+import { UserLoginComponent } from './user-login/user-login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   // {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'home',
     component: LandingPageComponent
+  },
+  {
+    path: 'login',
+    component: UserLoginComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
   },
   {
     path: 'project-request',

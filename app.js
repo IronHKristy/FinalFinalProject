@@ -6,19 +6,19 @@ const cookieParser  = require('cookie-parser');
 const bodyParser    = require('body-parser');
 const layouts       = require('express-ejs-layouts');
 const mongoose      = require('mongoose');
-const dotenv        = require('dotenv');
-const cors          = require('cors');
 const session       = require('express-session');
 const passport      = require('passport');
-const bcrypt        = require('bcrypt');
 const LocalStrategy = require('passport-local').Strategy;
-const User          = require('./models/user-model');
+const bcrypt        = require('bcrypt');
+const dotenv        = require('dotenv');
+const cors          = require('cors');
 
 dotenv.config();
 mongoose.connect(process.env.MONGODB_URI);
 
 // mongoose.connect('mongodb://localhost/my-final-project');
 
+const User          = require('./models/user-model');
 const app = express();
 
 // view engine setup

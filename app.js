@@ -9,6 +9,7 @@ const mongoose      = require('mongoose');
 const session       = require('express-session');
 const passport      = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const FbStrategy    = require('passport-facebook').Strategy;
 const bcrypt        = require('bcrypt');
 const dotenv        = require('dotenv');
 const cors          = require('cors');
@@ -53,6 +54,55 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.serializeUser((user, cb) => {
+  cb(null, user._id);
+});
+
+passport.deserializeUser((userId, cb) => {
+  User.findById(userId, (err, user) => {
+    cb(err, user);
+  });
+});
+
+
+passport.use(new LocalStrategy((username, password, next) => {
+  User.findOne({ username }, (err, user) => {
+    if (err) {
+      next(err);
+    } else if (!user) {
+      next(null, false, { message: "Incorrect username" });
+    } else if (!bcrypt.compareSync(password, user.encryptedPassword)) {
+      next(null, false, { message: "Incorrect password" });
+    } else {
+      next(null, user);
+    }
+  });
+}));
+
+
+// passport.use(new FbStrategy({
+//     clientID: process.env.FB_CLIENT_ID,
+//     clientSecret: process.env.FB_CLIENT_SECRET,
+//     callbackURL: process.env.HOST_ADDRESS + '/auth/facebook/callback'
+//   },
+//   saveSocialUser // <──◉ social login callback
+// ));
+//   function(accessToken, refreshToken, profile, done) {
+//     User.findOrCreate(..., function(err, user) {
+//       if (err) { return done(err); }
+//       done(null, user);
+//     });
+//   }
+// ));
+
+// passport.use(new FbStrategy({
+//   clientID: "1981902438708397",
+//   clientSecret: "fc5256cdf3016ea2bebf9bd499027eb3",
+//   callbackURL: "http://localhost:3000/auth/facebook/callback"
+// }, (accessToken, refreshToken, profile, done) => {
+//   done(null, profile);
+// }));
 
 const passportSetup = require('./config/passport');
 passportSetup(passport);

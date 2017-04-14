@@ -36,7 +36,9 @@ export class UserLoginComponent implements OnInit {
 
     thePromise.catch((err) => {
       this.user = null;
-      this.error = err;
+      // this.error = err;
+      this.error = "Incorrect username or password";
+      console.log("there was an err in login");
     });
 
   }
@@ -47,7 +49,7 @@ export class UserLoginComponent implements OnInit {
     thePromise.then((userInfo) => {
       this.user = userInfo;
       this.error = null;
-      this.myNavigator.navigate(['/home']);
+      this.myNavigator.navigate(['/login']);
 
     });
 

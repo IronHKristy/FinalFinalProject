@@ -6,6 +6,8 @@ const userSchema = new Schema({
   username: String,
   email: String,
   password: String,
+  provider: String,
+  providerId: String,
   myProjects: []
 }, {
   timestamps: {

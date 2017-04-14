@@ -33,6 +33,7 @@ ul {
   border-radius: 26px;
   transition: .5s ease;
   backface-visibility: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 }
 
 .middle {

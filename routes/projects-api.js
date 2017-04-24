@@ -25,7 +25,6 @@ router.post('/projects', (req, res, next) => {
     images: req.body.images,
     user: req.body.user,
     requester: req.body.user,
-    designer: req.user._id
   });
 
   newProject.save((err) => {

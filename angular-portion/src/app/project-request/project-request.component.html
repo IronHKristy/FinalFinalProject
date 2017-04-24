@@ -165,14 +165,14 @@
         <label for="mediaType" class="cols-sm-2 control-label">File Type</label>
           <div class="cols-sm-10">
             <div>
-              <label class="checkbox-inline" for="checkboxes-0">
-                <input type="checkbox" id="checkboxes-0" [(ngModel)]="formInfo.fileType" name="fileType[]" value="jpg"> JPG
+              <label class="radio-inline" for="radios-0">
+                <input type="radio" [(ngModel)]="formInfo.fileType" name="fileType[]" value="jpg"> JPG
               </label>
-              <label class="checkbox-inline" for="checkboxes-1">
-                <input type="checkbox" id="checkboxes-1" [(ngModel)]="formInfo.fileType" name="fileType[]" value="png"> PNG
+              <label class="radio-inline" for="radios-1">
+                <input type="radio" [(ngModel)]="formInfo.fileType" name="fileType[]" value="png"> PNG
               </label>
-              <label class="checkbox-inline" for="checkboxes-2">
-                <input type="checkbox" id="checkboxes-2" [(ngModel)]="formInfo.fileType" name="fileType[]" value="vector"> Vector
+              <label class="radio-inline" for="radios-2">
+                <input type="radio" [(ngModel)]="formInfo.fileType" name="fileType[]" value="vector"> Vector
               </label>
             </div>
         </div>

@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 const Project = require('../models/project-model');
+const upload = require('../config/multer');
 
 router.get('/projects', (req, res, next) => {
   Project.find((err, projectsList) => {
@@ -79,6 +80,18 @@ router.delete('/projects/:id', (req, res, next) => {
       return;
     }
     res.json({ message: 'Project has been removed.' });
+  });
+});
+
+router.post('/projects/:id', upload.single('file'), (req, res, next) => {
+  const projectComplete = new ProjectComplete({
+    images: `/uploads/${req.file.filename}`
+  });
+
+  projectComplete.save((err) => {
+    if (err) {
+      return(err);
+    }
   });
 });
 

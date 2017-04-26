@@ -32,6 +32,12 @@ export class ProjectService {
   .then(apiResponse => apiResponse.json())
 }
 
+  // contributeToProject(id) {
+  //   return this.myHttp.post(`${this.BASE_URL}/api/project-details/${id}`)
+  //   .toPromise()
+  //   .then(apiResponse => apiResponse.json())
+  // }
+
   saveThisShitToThatShit(item, id) {
     const options = {withCredentials: true };
     const userId = id._id;

@@ -13,9 +13,11 @@ ul {
 }
 
 .italicize {
-  font-family: 'Lobster Two', cursive;
-  text-transform: lowercase;
-  font-size: 79px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  /*text-transform: uppercase;*/
+  font-weight:600;
+  font-size: 70px;
+  text-shadow: 2px 2px 4px #3b3b3b;
 }
 
 .all-color-boxes {
@@ -27,8 +29,8 @@ ul {
 }
 
 .color-palette {
-  height: 25%;
-  width: 90%;
+  height: 90%;
+  width: 100%;
   border: 7px solid rgba(14, 80, 77, 0.22);
   border-radius: 26px;
   transition: .5s ease;
@@ -39,10 +41,6 @@ ul {
 .middle {
   transition: .5s ease;
   opacity: 0;
-  /*top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);*/
 }
 
 .color-palette:hover {
@@ -54,9 +52,6 @@ ul {
   opacity: 1;
 }
 
-/*.middle:hover {
-  opacity: 1;
-}*/
 
 .text {
   background-color: white;
@@ -75,4 +70,34 @@ ul {
   width: 100%;
   border: none;
   text-align: center;
+}
+
+h1 {
+  display:inline;
+  text-transform:uppercase;
+  font-size:30px;
+  padding:20px;
+}
+
+
+/*testing*/
+.eigthysixvh {
+  height:86vh;
+}
+
+.twentyeightvh {
+  height:28vh;
+}
+
+.remainder {
+  color:white;
+}
+
+.main-content {
+  height:66vh;
+}
+
+.submit-row {
+  height:20vh;
+  color:black;
 }

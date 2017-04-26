@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row main">
-    <div class="main-login main-center" *ngIf="!user">
-
+    <div class="main-login main-center">
+<!-- *ngIf="!user" -->
       <form action="/login" class="" method="post">
 
         <div class="form-group">
@@ -28,8 +28,8 @@
         </div>
 
         <div class="form-group">
-          <button class="btn btn-primary btn-lg btn-block login-button" (click)="login()"> Log In </button>
-          <a [routerLink]="['/signup']"><button class="btn btn-primary btn-lg btn-block login-button"> Create an Account </button></a>
+          <button class="btn btn-lg btn-block login-button" (click)="login()"> Log In </button>
+          <a [routerLink]="['/signup']"><button class="btn btn-lg btn-block login-button"> Create an Account </button></a>
           <!-- <a href="/auth/facebook"><button class="btn btn-primary btn-lg btn-block login-button"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</button></a> -->
         </div>
       </form>

@@ -21,7 +21,7 @@
       <a class="nav-link w-nav-link" routerLink="/project-list">Design</a>
       <a class="nav-link w-nav-link" routerLink="/project-request">Request</a>
       <a *ngIf="user" class="nav-link w-nav-link" routerLink='/user-profile'>{{user.username}}</a>
-      <a class="nav-link w-nav-link logout-button" routerLink='/login'><button (click)="logout()"> log out </button></a>
+      <a class="nav-link w-nav-link logout-button" routerLink='/login'><span (click)="logout()"> log out </span></a>
     </nav>
   </div>
 </div>

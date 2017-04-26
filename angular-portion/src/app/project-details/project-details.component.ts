@@ -12,12 +12,24 @@ export class ProjectDetailsComponent implements OnInit {
   uploader: FileUploader = new FileUploader({
     // url: `${this.BASE_URL}/api/project-details/${id}`
     // url: `/project-details/${id}`
-    url: '/project-details/id'
-    // url: '/project-details/_id'
+    // url: `/project-details/id`
+    // url: `/project-details/_id`
+    url: `/project-details/:id`
 
   });
 
-  project: Array<any> = [];
+  // project: Array<any> = [];
+  project: any = {
+    name: '',
+    mediaType: '',
+    fileType: '',
+    desc: '',
+    images: '',
+    colorOne: '',
+    colorTwo: '',
+    colorThree: '',
+    requester: ''
+  }
 
     constructor(
       private myRoute: ActivatedRoute,
@@ -57,6 +69,7 @@ export class ProjectDetailsComponent implements OnInit {
     }
 
     contributeToProject() {
+      // this.myProjectService.post(this.project['_id'])
       this.uploader.uploadAll();
     }
 

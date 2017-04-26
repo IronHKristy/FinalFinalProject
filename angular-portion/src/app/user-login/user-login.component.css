@@ -73,7 +73,7 @@ input::-webkit-input-placeholder {
   margin: 0 auto;
   max-width: 400px;
   padding: 10px 40px;
-  background:#009edf;
+  background:#823f8c;
   color: #FFF;
   text-shadow: none;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
@@ -83,12 +83,23 @@ box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 }
 
 span.input-group-addon i {
-    color: #009edf;
+    color: #555;
     font-size: 17px;
 }
 
 .login-button{
   margin-top: 5px;
+  background-color: #a34fb0;
+  /*border-color: #402843;*/
+  color: white;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+}
+
+.login-button:hover {
+  background-color: #703479;
+  /*border-color: #3d2640;*/
+  color: white;
+  text-decoration: none;
 }
 
 .login-register{

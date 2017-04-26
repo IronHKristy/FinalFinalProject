@@ -17,8 +17,8 @@
 
 .fancy-text {
   color: #fff;
-  background-color: rgba(54, 28, 58, 0.82);
-  border-color: #361c3a;
+  background-color: #823f8c;
+  border-color: #823f8c;
   border-radius: 3px;
   font-size: 18px;
   padding: 20px 40px;
@@ -26,7 +26,7 @@
 }
 
 .fancy-text:hover {
-  background-color: #361c3a;
+  background-color: #703479;
 }
 
 .this-text {

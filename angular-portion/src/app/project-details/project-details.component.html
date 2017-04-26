@@ -1,4 +1,4 @@
-
+<!--
 <div class="row top-row">
 
 
@@ -24,13 +24,14 @@
   </div>
 
 
-  <div class="col-md-7 col-md-offset-1 project-details all-color-boxes">
+  <div class="col-md-6 col-md-offset-1 project-details all-color-boxes">
         <p class="italicize">{{project.name}}</p>
         <p>{{project.desc}}</p>
-        <p>{{project.mediaType}}</p>
-        <p>{{project.fileType}}</p>
-        <p>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</p>
+        <h1>{{project.mediaType}}</h1>
+        <h1>{{project.fileType}}</h1>
+        <h1>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</h1>
   </div>
+
 
 <div class="row submit-bar">
   <div class="col-md-10 col-md-offset-1">
@@ -43,10 +44,116 @@
 <div class="row submit-bar">
   <div class="col-md-10 col-md-offset-1">
     <form>
-    <input type="file" name="file" ng2FileSelect [uploader]="uploader" />
+    <input type="file" name="file" [(ngModel)]="project.images" ng2FileSelect [uploader]="uploader" />
     <button class="nav-button" (click)="contributeToProject()">----------&gt;  contribute to this project  &lt;----------</button>
   </form>
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+  <img src={{project.images}}>
+</div>
+</div>
+</div>
+
+
+<!-- [(ngModel)]="formInfo.images" --> -->
+
+
+<div class="container">
+  <div class="row">
+
+
+
+<!-- Color Palettes -->
+    <div class="col-md-2 col-md-offset-1 eightysixvh">
+      <div class="row twentyeightvh">
+        <div class="color-palette" [style.backgroundColor]="project.colorOne">
+          <div class="middle">
+           <div class="text">{{project.colorOne}}</div>
+         </div>
+       </div>
+      </div>
+      <div class="row twentyeightvh">
+        <div class="color-palette" [style.backgroundColor]="project.colorTwo">
+          <div class="middle">
+           <div class="text">{{project.colorTwo}}</div>
+         </div>
+       </div>
+      </div>
+      <div class="row twentyeightvh">
+        <div class="color-palette" [style.backgroundColor]="project.colorThree">
+          <div class="middle">
+           <div class="text">{{project.colorThree}}</div>
+         </div>
+       </div>
+      </div>
+    </div>
+
+
+
+    <!-- All Other Content -->
+    <div class="col-md-7 col-md-offset-2 remainder">
+
+    <div class="main-content">
+      <!-- Title Row -->
+      <div class="row">
+        <div class="col-md-10 title">
+          <p class="italicize">{{project.name}}</p>
+        </div>
+        <div class="col-md-2 ex">
+          <span (click)="deleteProject()"><i class="fa fa-times-circle fa-5x" aria-hidden="true"></i></span>
+        </div>
+      </div>
+      <!-- End Title Row -->
+
+      <!-- Description Row -->
+      <div class="row">
+        <div class="col-md-12 description">
+          <p>{{project.desc}}</p>
+        </div>
+      </div>
+      <!-- End Description Row -->
+
+      <!-- Other Details -->
+      <div class="row">
+        <div class="col-md-4 one">
+          <h1>{{project.mediaType}}</h1>
+        </div>
+        <div class="col-md-4 two">
+          <h1>{{project.fileType}}</h1>
+        </div>
+        <div class="col-md-4 three">
+          <h1>{{project.dueDate | date:'yyyyMMMdd' | uppercase}}</h1>
+        </div>
+      </div>
+      <!-- End Other Details -->
+    </div>
+
+
+      <div class="submit-row">
+      <!-- Submit Your Own -->
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <form>
+            <input type="file" name="file" [(ngModel)]="project.images" ng2FileSelect [uploader]="uploader" />
+            <button (click)="contributeToProject()">Submit A Design</button>
+          </form>
+        </div>
+      </div>
+      <!-- End Submit Your Own -->
+    </div>
+
+
+    </div>
+    <!-- End Other Content -->
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <img src={{project.images}}>
+    </div>
+  </div>
 </div>

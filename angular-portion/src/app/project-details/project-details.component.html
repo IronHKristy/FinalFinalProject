@@ -74,7 +74,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <form>
-            <input type="file" name="file" [(ngModel)]="project.images" ng2FileSelect [uploader]="uploader" />
+            <input type="file" name="file" [(ngModel)]="project.images" />
             <button (click)="contributeToProject()">Submit A Design</button>
           </form>
         </div>
@@ -82,7 +82,7 @@
       <!-- End Submit Your Own -->
     </div>
 
-
+<!-- ng2FileSelect [uploader]="uploader" -->
     </div>
     <!-- End Other Content -->
 

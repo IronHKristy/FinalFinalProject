@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { FileSelectDirective } from "ng2-file-upload";
+// import { FileSelectDirective } from "ng2-file-upload";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FileSelectDirective,
+    // FileSelectDirective,
     LandingPageComponent,
     ProjectRequestComponent,
     ProjectListComponent,

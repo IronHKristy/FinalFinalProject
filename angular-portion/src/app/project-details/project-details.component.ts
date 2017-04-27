@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProjectService } from '../services/project.service';
-import { FileSelectDirective, FileUploader } from "ng2-file-upload";
+// import { FileSelectDirective, FileUploader } from "ng2-file-upload";
 
 @Component({
   selector: 'app-project-details',
@@ -9,14 +9,7 @@ import { FileSelectDirective, FileUploader } from "ng2-file-upload";
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
-  uploader: FileUploader = new FileUploader({
-    // url: `${this.BASE_URL}/api/project-details/${id}`
-    // url: `/project-details/${id}`
-    // url: `/project-details/id`
-    // url: `/project-details/_id`
-    url: `/project-details/:id`
 
-  });
 
   // project: Array<any> = [];
   project: any = {
@@ -70,7 +63,7 @@ export class ProjectDetailsComponent implements OnInit {
 
     contributeToProject() {
       // this.myProjectService.post(this.project['_id'])
-      this.uploader.uploadAll();
+      // this.uploader.uploadAll();
     }
 
 

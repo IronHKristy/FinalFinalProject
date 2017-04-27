@@ -20,3 +20,13 @@
         </div>
     </div>
 </section>
+
+<div class="row" *ngIf="!user">
+  <div class="col-md-4 col-md-offset-4 loginDiv">
+    <div class="row thirtyfivevh">
+    </div>
+    <div class="row center">
+        <a class="fancy-text" [routerLink]="['/login']">PLEASE LOGIN FIRST</a>
+    </div>
+  </div>
+</div>

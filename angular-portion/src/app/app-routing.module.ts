@@ -16,7 +16,7 @@ const routes: Routes = [
   //   component: AppComponent
   // },
   {
-    path: 'home',
+    path: '',
     component: LandingPageComponent
   },
   {

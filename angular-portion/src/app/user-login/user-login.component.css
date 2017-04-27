@@ -108,6 +108,7 @@ span.input-group-addon i {
 }
 
 .error {
-  font-size: 130px;
+  font-size: 30px;
   color: red;
+  text-align:center;
 }
